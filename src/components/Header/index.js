@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from '../../assets/images/logo.svg';
 
-const Header = props => {
+const Header = ({ score, BirdsData, currentStep }) => {
   return (
     <div className="header">
       <div className="header__container">
@@ -15,15 +15,15 @@ const Header = props => {
         </h1>
         <div className="header__score">
           <span className="header__score-text">Score: </span>
-          <span className="header__score-value">{props.score}</span>
+          <span className="header__score-value">{score}</span>
         </div>
       </div>
       <div className="header__game-map">
-        {props.BirdsData.map(({ name, id }) => (
+        {BirdsData.map(({ name, id }) => (
           <div
             key={id}
             className={
-              props.currentStep + 1 === id
+              currentStep + 1 === id
                 ? 'header__game-item active'
                 : 'header__game-item'
             }
