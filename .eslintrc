@@ -44,9 +44,7 @@
     "no-console": "off",
     "react/prop-types": 0,
     "react/prefer-stateless-function": 0,
-    "prettier/prettier": [
-      "error"
-    ]
+    "prettier/prettier": 0
   },
   "globals": {
     "window": true,
