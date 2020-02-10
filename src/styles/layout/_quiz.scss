@@ -1,0 +1,30 @@
+.quiz {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding: 0 30px;
+  font-size: $fsz-2;
+  background-color: $block;
+  @media screen and (max-width: $tiny) {
+    padding: 0 15px;
+  }
+}
+.bird-pic {
+  margin: 25px 10px 25px 0;
+}
+
+// ************** Player *****************
+.rhap_container {
+  width: 50%;
+  min-width: 280px;
+  height: 90px;
+  padding: 10px 15px;
+  background-color: $block;
+  box-shadow: none;
+}
+.rhap_time {
+  color: $white;
+}
+// ***************************************

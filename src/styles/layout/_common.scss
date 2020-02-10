@@ -1,0 +1,11 @@
+#root {
+  background-color: $root;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: $wide;
+  margin: 0 auto;
+  font-family: $font;
+  color: $white;
+}

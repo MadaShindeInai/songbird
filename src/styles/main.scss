@@ -1,0 +1,12 @@
+@import "base/normalize";
+@import "base/fonts";
+@import "abstracts/variables";
+
+//components
+@import "components/buttons";
+
+//layout and pages
+@import "layout/common";
+@import "layout/header";
+@import "layout/quiz";
+@import "layout/game";
