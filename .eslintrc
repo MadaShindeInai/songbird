@@ -23,12 +23,20 @@
       "experimentalObjectRestSpread": true
     }
   },
-  "plugins": ["react", "react-hooks", "jsx-a11y", "prettier"],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "jsx-a11y",
+    "prettier"
+  ],
   "rules": {
     "react/jsx-filename-extension": [
       1,
       {
-        "extensions": [".js", ".jsx"]
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
       }
     ],
     "react-hooks/rules-of-hooks": "error",
@@ -36,7 +44,9 @@
     "no-console": "off",
     "react/prop-types": 0,
     "react/prefer-stateless-function": 0,
-    "prettier/prettier": ["error"]
+    "prettier/prettier": [
+      "error"
+    ]
   },
   "globals": {
     "window": true,
