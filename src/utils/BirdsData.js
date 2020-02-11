@@ -282,7 +282,7 @@ const BirdsData = [
   },
   {
     id: 5,
-    name: 'Куриные (часть2)',
+    name: 'Куриные (часть 2)',
     icon: 'fas fa-skull-crossbones',
     birds: [
       {

@@ -65,7 +65,7 @@ const App = () => {
                 className={state ? 'btn' : 'btn-active'}
                 disabled={state}
               >
-                Next Level
+                ПЕРЕЙТИ НА СЛЕДУЮЩИЙ УРОВЕНЬ
             </button>
             </>
           )
