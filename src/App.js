@@ -17,30 +17,31 @@ const App = () => {
   const [state, setState] = useState(true);
   const [tempBird, setTempBird] = useState('');
   const [theEnd, setTheEnd] = useState(false);
-  console.log('TCL: App -> tempBird', tempBird);
 
   const goNextLevel = () => {
     if (currentStep < BirdsData.length - 1) {
       setCurrentStep(currentStep + 1);
       setCurrentBird(randomBird(BirdsData[currentStep + 1].birds));
+
     } else {
       setTheEnd(true);
     }
     setState(true);
+    setTempBird('');
   };
 
   return (
-    <>
-      {theEnd ? (
-        <TheEnd />
-      ) : (
-          <div className="wrapper">
-            <div>
-              <Header
-                BirdsData={BirdsData}
-                score={score}
-                currentStep={currentStep}
-              />
+    <div className="wrapper">
+      <div>
+        <Header
+          BirdsData={BirdsData}
+          score={score}
+          currentStep={currentStep}
+        />
+        {theEnd ? (
+          <TheEnd score={score} />
+        ) : (
+            <>
               <Quiz currentBird={currentBird} state={state} />
               <div className="game">
                 <Options
@@ -61,15 +62,16 @@ const App = () => {
               <button
                 type="button"
                 onClick={goNextLevel}
-                className="btn"
+                className={state ? 'btn' : 'btn-active'}
                 disabled={state}
               >
                 Next Level
             </button>
-            </div>
-          </div>
-        )}
-    </>
+            </>
+          )
+        }
+      </div>
+    </div>
   );
 };
 

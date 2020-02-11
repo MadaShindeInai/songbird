@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 20px 25px;
+  padding: 30px 20px 10px;
   @media screen and (max-width: $tiny) {
     padding: 20px 10px;
   }
@@ -24,11 +24,10 @@
   width: 200px;
   height: 40px;
   background-color: $map;
+  @media screen and (max-width: $small) {
+    height: 30px;
+  }
 }
-// .header__game-item:nth-child(1) {
-//   text-align: center;
-//   background-color: $active;
-// }
 .active {
   text-align: center;
   background-color: $active;

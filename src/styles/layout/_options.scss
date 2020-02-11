@@ -1,0 +1,26 @@
+.game__options {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  background-color: $block;
+  outline: 1px solid $item;
+}
+.game__options-item {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 25px 0;
+  background-color: $block;
+  border: none;
+  outline: 1px solid $item;
+  @media screen and (max-width: $small) {
+    padding: 10px 0;
+  }
+}
+.game__options-item:hover {
+  background-color: $item;
+  cursor: pointer;
+}

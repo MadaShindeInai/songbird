@@ -10,7 +10,7 @@ const Header = ({ score, BirdsData, currentStep }) => {
             src={Logo}
             className="header__logo-image"
             alt="Logo"
-            width="200"
+            width="190"
           />
         </h1>
         <div className="header__score">

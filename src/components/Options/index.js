@@ -3,7 +3,7 @@ import Wrong from '../../assets/sounds/wrong.mp3';
 import Success from '../../assets/sounds/success.wav';
 
 let scoreResult = 5;
-const Options = ({ BirdsDataItem, setState, score, state, setTempBird, currentBird, setScore }) => {
+const Options = ({ state, setState, setTempBird, currentBird, score, setScore, BirdsDataItem }) => {
   const playSound = src => {
     const audio = new Audio();
     audio.src = src;
@@ -13,32 +13,34 @@ const Options = ({ BirdsDataItem, setState, score, state, setTempBird, currentBi
     if (state) {
       setTempBird(item);
       if (+item.id !== +currentBird.id) {
-        e.target.style.backgroundColor = 'red';
+        e.target.style.backgroundColor = '#F64B4B';
         playSound(Wrong);
         if (scoreResult > 0) {
           scoreResult -= 1;
         }
       } else {
-        e.target.style.backgroundColor = 'green';
+        e.target.style.backgroundColor = '#00bc8c';
         playSound(Success);
         setState(false);
         setScore(score + scoreResult);
         scoreResult = 5;
       }
-      console.log('TCL: clickAction -> scoreResult', scoreResult);
+    } else {
+      setTempBird(item);
     }
   };
   return (
     <div className="game__options">
       {BirdsDataItem.birds.map(item => (
-        <div
+        <button
+          type="button"
+          className="game__options-item"
           key={item.id}
           id={item.id}
           onClick={e => clickAction(item, e)}
-          className="game__options-item"
         >
           {item.name}
-        </div>
+        </button>
       ))}
     </div>
   );

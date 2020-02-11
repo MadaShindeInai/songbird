@@ -13,7 +13,7 @@ const GameInfo = ({ tempBird }) => {
         width="200"
         height="150"
       />
-      <span className={tempBird ? 'bird-name' : 'none'}>
+      <span className={tempBird ? 'game__info-name' : 'none'}>
         {tempBird ? tempBird.name : '******'}
       </span>
       <span className={tempBird ? 'none' : 'game__info-default'}>
