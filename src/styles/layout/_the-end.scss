@@ -1,0 +1,24 @@
+.the-end {
+  height: 400px;
+  background-color: $block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+    @media screen and (max-width: $medium) {
+      padding: 20px;
+  }
+      @media screen and (max-width: $tiny) {
+      margin-top: 40px;
+      padding: 10px;
+  }
+}
+.the-end__congrats {
+  margin: 40px 0;
+  font-size: $fsz-4;
+}
+.the-end__result {
+  text-align: center;
+  margin: 0 0 50px;
+}

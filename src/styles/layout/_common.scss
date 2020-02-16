@@ -1,0 +1,12 @@
+#root {
+  background-image: url(//live.staticflickr.com/4527/38345763082_cd5b53243e_h.jpg);
+  background-size: cover;
+}
+.wrapper {
+  width: 100%;
+  max-width: $wide;
+  min-height: 937px;
+  margin: 0 auto;
+  font-family: $font;
+  color: $white;
+}

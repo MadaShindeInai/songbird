@@ -1,0 +1,30 @@
+.game {
+  display: flex;
+  justify-content: space-between;
+  height: 440px;
+  @media screen and (max-width: $medium) {
+    flex-direction: column;
+    height: fit-content;
+  }
+}
+.game__info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: $block;
+  outline: 1px solid $item;
+}
+.game__info-name {
+  margin-bottom: 5px;
+}
+.game__info-description {
+  font-size: $primary-fsz;
+  text-align: center;
+}
+.none {
+  display: none;
+}
